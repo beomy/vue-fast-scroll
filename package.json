@@ -1,0 +1,27 @@
+{
+  "name": "vue-fast-scroll",
+  "version": "1.0.0",
+  "description": "vue application fast scroll",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/beomy/vue-fast-scroll.git"
+  },
+  "keywords": [
+    "vue-fast-scroll",
+    "vue fast scroll",
+    "fast scroll"
+  ],
+  "author": {
+    "name": "Hyo Bum Lee",
+    "email": "hyob1203@naver.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/beomy/vue-fast-scroll/issues"
+  },
+  "homepage": "https://github.com/beomy/vue-fast-scroll#readme"
+}
