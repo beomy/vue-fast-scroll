@@ -1,0 +1,4 @@
+.fast-scroll-toggle { position: fixed; top: 45%; left: 45%; background-color: #2a2b31; color: #fff; opacity: 0.7; border-radius: 60px; font-size: 40px; width: 60px; height: 60px; padding-left: 11px; }
+.fade-leave-active { transition: opacity .2s; }
+.fade-leave-to { opacity: 0; }
+.side-indexer { position: fixed; top: 0; right: 0; }

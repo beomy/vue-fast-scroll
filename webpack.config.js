@@ -3,10 +3,14 @@ const VueLoaderPlugin = require('vue-loader/lib/plugin')
 
 module.exports = {
   mode: 'development',
-  entry: './src/FastScroll.vue',
+  entry: './src/index.js',
   output: {
+    path: path.resolve(__dirname, 'dist') + '/js',
+    publicPath: '/',
     filename: 'vue-fast-scroll.js',
-    path: path.resolve(__dirname, 'dist')
+    library: 'VueFastScroll',
+    libraryTarget: 'umd',
+    umdNamedDefine: true
   },
   module: {
     rules: [

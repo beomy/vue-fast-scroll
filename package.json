@@ -2,7 +2,7 @@
   "name": "vue-fast-scroll",
   "version": "1.0.0",
   "description": "vue application fast scroll",
-  "main": "dist/vue-fast-scroll.js",
+  "main": "dist/js/vue-fast-scroll.js",
   "scripts": {
     "build": "webpack",
     "test": "node test.js"

@@ -1,7 +1,7 @@
 <template>
   <div ref="fastWrapper">
     <slot name="fastScrollItems"></slot>
-    <div class="side_indexer">
+    <div class="side-indexer">
       <ul ref="keyList"
         @touchmove.prevent.stop="scrollToSearch">
         <li v-for="(item, i) of keyList"
@@ -11,13 +11,14 @@
       </ul>
     </div>
     <transition name="fade">
-        <div v-if="fastScrollToggle" class="fastScrollToggle">{{ findKey }}</div>
+        <div v-if="fastScrollToggle" class="fast-scroll-toggle">{{ findKey }}</div>
     </transition>
   </div>
 </template>
 
 <script>
 export default {
+  name: 'fastScroll',
   props: {
     keyList: {
       type: Array,
@@ -69,9 +70,7 @@ export default {
 
   methods: {
     scrollToSearch (e) {
-      if (this.fastScrollIndex[this.keyList[this.keyList.length - 1].key] === 0) {
-        this.setFastScrollIndex()
-      }
+      this.setFastScrollIndex()
 
       const clientY = e instanceof MouseEvent ? e.clientY : e.touches[0].clientY
       for (const key in this.fastScrollIndex) {
@@ -87,10 +86,9 @@ export default {
           const dom = this.$refs.fastWrapper.querySelector(`[fast-key=${this.findKey}]`)
           if (dom) {
             dom.scrollIntoView()
-            window.scrollTo(0, window.scrollY - dom.clientHeight)
           }
         } catch (e) {
-          console.log(e)
+          console.error(e)
         }
       }
     },
@@ -105,24 +103,3 @@ export default {
   }
 }
 </script>
-<!--<style scoped>
-  .fastScrollToggle {
-    position: fixed;
-    top: 45%;
-    left: 45%;
-    background-color: #2a2b31;
-    color: #fff;
-    opacity: 0.7;
-    border-radius: 60px;
-    font-size: 40px;
-    width: 60px;
-    height: 60px;
-    padding-left: 11px;
-  }
-  .fade-leave-active {
-    transition: opacity .2s;
-  }
-  .fade-leave-to {
-    opacity: 0;
-  }
-</style>-->
