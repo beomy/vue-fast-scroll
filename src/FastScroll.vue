@@ -1,12 +1,13 @@
 <template>
-  <div ref="fastWrapper">
-    <slot name="fastScrollItems"></slot>
-    <div class="side-indexer">
-      <ul ref="keyList"
-        @touchmove.prevent.stop="scrollToSearch">
+  <div>
+    <div class="scroll-list" ref="scrollList">
+      <slot name="scrollList"></slot>
+    </div>
+    <div class="index-list" ref="indexList">
+      <ul @touchmove.prevent.stop="scrollToSearch">
         <li v-for="(item, i) of keyList"
           :key="i"
-          :fast-scroll-index="i"
+          :fast-scroll-key="item.key"
           @click="scrollToSearch">{{ item.text }}</li>
       </ul>
     </div>
@@ -70,7 +71,9 @@ export default {
 
   methods: {
     scrollToSearch (e) {
-      this.setFastScrollIndex()
+      if (this.fastScrollIndex[this.keyList[this.keyList.length - 1].key] === 0) {
+        this.setFastScrollIndex()
+      }
 
       const clientY = e instanceof MouseEvent ? e.clientY : e.touches[0].clientY
       for (const key in this.fastScrollIndex) {
@@ -83,7 +86,7 @@ export default {
 
       if (this.findKey !== '') {
         try {
-          const dom = this.$refs.fastWrapper.querySelector(`[fast-key=${this.findKey}]`)
+          const dom = this.$refs.scrollList.querySelector(`[fast-scroll-key=${this.findKey}]`)
           if (dom) {
             dom.scrollIntoView()
           }
@@ -95,8 +98,7 @@ export default {
 
     setFastScrollIndex () {
       for (const item of this.keyList) {
-        const index = this.keyList.indexOf(item)
-        const clientReact = this.$refs.keyList.querySelector(`[fast-scroll-index="${index}"]`).getBoundingClientRect()
+        const clientReact = this.$refs.indexList.querySelector(`[fast-scroll-key="${item.key}"]`).getBoundingClientRect()
         this.fastScrollIndex[item.key] = clientReact.y + clientReact.height
       }
     }

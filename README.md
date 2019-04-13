@@ -63,24 +63,24 @@ key-list 프로퍼티로 전달 되어야 할 값은 key와 text를 쌍으로 �
 
 위의 코드와 같이 key-list를 구성한다면, HTML에는
 
-<pre><code><div class="side-indexer">
-&lt;ul&gt;
-  &lt;li&gt;ㄱ&lt;/li&gt;
-  &lt;li&gt;ㄴ&lt;/li&gt;
-  &lt;li&gt;ㄷ&lt;/li&gt;
-  &lt;li&gt;ㄹ&lt;/li&gt;
-  &lt;li&gt;ㅁ&lt;/li&gt;
-  &lt;li&gt;ㅂ&lt;/li&gt;
-  &lt;li&gt;ㅅ&lt;/li&gt;
-  &lt;li&gt;ㅇ&lt;/li&gt;
-  &lt;li&gt;ㅈ&lt;/li&gt;
-  &lt;li&gt;ㅊ&lt;/li&gt;
-  &lt;li&gt;ㅋ&lt;/li&gt;
-  &lt;li&gt;ㅌ&lt;/li&gt;
-  &lt;li&gt;ㅍ&lt;/li&gt;
-  &lt;li&gt;ㅎ&lt;/li&gt;
-&lt;/ul&gt;
-</div></code></pre>
+<pre><code>&lt;div class="side-indexer"&gt;
+  &lt;ul&gt;
+    &lt;li&gt;ㄱ&lt;/li&gt;
+    &lt;li&gt;ㄴ&lt;/li&gt;
+    &lt;li&gt;ㄷ&lt;/li&gt;
+    &lt;li&gt;ㄹ&lt;/li&gt;
+    &lt;li&gt;ㅁ&lt;/li&gt;
+    &lt;li&gt;ㅂ&lt;/li&gt;
+    &lt;li&gt;ㅅ&lt;/li&gt;
+    &lt;li&gt;ㅇ&lt;/li&gt;
+    &lt;li&gt;ㅈ&lt;/li&gt;
+    &lt;li&gt;ㅊ&lt;/li&gt;
+    &lt;li&gt;ㅋ&lt;/li&gt;
+    &lt;li&gt;ㅌ&lt;/li&gt;
+    &lt;li&gt;ㅍ&lt;/li&gt;
+    &lt;li&gt;ㅎ&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
 
 위의 HTML이 랜더링 됩니다. 이 엘리먼트를 `인덱스 리스트`라고 하도록 하겠습니다.
 
