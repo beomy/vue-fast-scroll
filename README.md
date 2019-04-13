@@ -25,24 +25,39 @@ example 디렉토리 밑에 예제 파일로도 확인 할 수 있습니다.
 or
 yarn add vue-fast-scroll</code></pre>
 
+#### global
+
 <pre><code>import Vue from 'vue'
 import VueFastScroll from 'vue-fast-scroll'
+import 'vue-fast-scroll/dist/css/vue-fast-scoll.css'
 
 Vue.use(VueFastScroll)</code></pre>
 
+#### local
+
+<pre><code>import Vue from 'vue'
+import { fastScroll } from 'vue-fast-scroll'
+import 'vue-fast-scroll/dist/css/vue-fast-scoll.css'
+
+export default {
+  components: {
+    fastScroll
+  }
+}</code></pre>
+
 ## 사용 설명
 
-### fast-scroll Component
+### `fast-scroll` Component
 
-fast-scroll 컴포넌트를 사용하여 그 안에 fast scroll을 지원해야 될 엘리먼트를 선언합니다. fast-scroll 컴포넌트는 key-list 프로퍼티를 가집니다.
+`fast-scroll` 컴포넌트를 사용하여 그 안에 fast scroll을 지원해야 될 엘리먼트를 선언합니다. `fast-scroll` 컴포넌트는 `key-list` 프로퍼티를 가집니다.
 
 <pre><code>&lt;fast-scroll :key-list="fastScrollKeyList"&gt;
   ...
 &lt;/fast-scroll&gt;</code></pre>
 
-### key-list Property
+### `key-list` Property
 
-key-list 프로퍼티로 전달 되어야 할 값은 key와 text를 쌍으로 가지는 객체입니다. key는 스크롤 될 리스트를 검색할 키이고, text는 스크롤 될 수 있는 key 리스트를 화면에 나타낼 문자열입니다.
+`key-list` 프로퍼티로 전달 되어야 할 값은 `key`와 `text`를 쌍으로 가지는 객체입니다.
 
 <pre><code>fastScrollKeyList = {
   {key: 'ㄱ', text: 'ㄱ'},
@@ -61,59 +76,71 @@ key-list 프로퍼티로 전달 되어야 할 값은 key와 text를 쌍으로 �
   {key: 'ㅎ', text: 'ㅎ'}
 }</code></pre>
 
-위의 코드와 같이 key-list를 구성한다면, HTML에는
+위의 코드와 같이 `key-list`를 구성한다면, HTML에는
 
-<pre><code>&lt;div class="side-indexer"&gt;
+<pre><code>&lt;div class="index-list"&gt;
   &lt;ul&gt;
-    &lt;li&gt;ㄱ&lt;/li&gt;
-    &lt;li&gt;ㄴ&lt;/li&gt;
-    &lt;li&gt;ㄷ&lt;/li&gt;
-    &lt;li&gt;ㄹ&lt;/li&gt;
-    &lt;li&gt;ㅁ&lt;/li&gt;
-    &lt;li&gt;ㅂ&lt;/li&gt;
-    &lt;li&gt;ㅅ&lt;/li&gt;
-    &lt;li&gt;ㅇ&lt;/li&gt;
-    &lt;li&gt;ㅈ&lt;/li&gt;
-    &lt;li&gt;ㅊ&lt;/li&gt;
-    &lt;li&gt;ㅋ&lt;/li&gt;
-    &lt;li&gt;ㅌ&lt;/li&gt;
-    &lt;li&gt;ㅍ&lt;/li&gt;
-    &lt;li&gt;ㅎ&lt;/li&gt;
+    &lt;li fast-scroll-key="ㄱ"&gt;ㄱ&lt;/li&gt;
+    &lt;li fast-scroll-key="ㄴ"&gt;ㄴ&lt;/li&gt;
+    &lt;li fast-scroll-key="ㄷ"&gt;ㄷ&lt;/li&gt;
+    &lt;li fast-scroll-key="ㄹ"&gt;ㄹ&lt;/li&gt;
+    &lt;li fast-scroll-key="ㅁ"&gt;ㅁ&lt;/li&gt;
+    &lt;li fast-scroll-key="ㅂ"&gt;ㅂ&lt;/li&gt;
+    &lt;li fast-scroll-key="ㅅ"&gt;ㅅ&lt;/li&gt;
+    &lt;li fast-scroll-key="ㅇ"&gt;ㅇ&lt;/li&gt;
+    &lt;li fast-scroll-key="ㅈ"&gt;ㅈ&lt;/li&gt;
+    &lt;li fast-scroll-key="ㅊ"&gt;ㅊ&lt;/li&gt;
+    &lt;li fast-scroll-key="ㅋ"&gt;ㅋ&lt;/li&gt;
+    &lt;li fast-scroll-key="ㅌ"&gt;ㅌ&lt;/li&gt;
+    &lt;li fast-scroll-key="ㅍ"&gt;ㅍ&lt;/li&gt;
+    &lt;li fast-scroll-key="ㅎ"&gt;ㅎ&lt;/li&gt;
   &lt;/ul&gt;
 &lt;/div&gt;</code></pre>
 
-위의 HTML이 랜더링 됩니다. 이 엘리먼트를 `인덱스 리스트`라고 하도록 하겠습니다.
+위의 HTML이 랜더링 됩니다. 이 엘리먼트를 `인덱스 리스트`라고 하도록 하겠습니다. `인덱스 리스트`는 fast scroll key 목록을 리스트로 나타내는 엘리먼트 입니다.
 
-### fast-scroll Component의 Slot
+`fast-scroll-key`에는 `key-list` 프로퍼티 리스트 아이템의 `key` 값이 되고, `li` 태그의 문자열은 `key-list` 프로터티 리스트 아이템의 `text`가 됩니다.
 
-fast-scroll 컴포넌트의 자식 컴포넌트로 fastScrollItems라는 이름을 가지는 Slot을 정의해야 합니다. 이 Slot은 스크롤 될 엘리먼트가 됩니다. 이 엘리먼트를 `스크롤 리스트`라고 하도록 하겠습니다.
+### `fast-scroll` Component의 Slot
+
+`fast-scroll` 컴포넌트의 자식 컴포넌트로 `scrollList`라는 이름을 가지는 Slot을 정의해야 합니다. 이 Slot은 스크롤 될 엘리먼트가 됩니다. 이 엘리먼트를 `스크롤 리스트`라고 하도록 하겠습니다.
 
 <pre><code>&lt;fast-scroll&gt;
-  &lt;ul slot="fastScrollItems"&gt;
+  &lt;ul slot="scrollList"&gt;
     ...
   &lt;/ul&gt;
 &lt;/fast-scroll&gt;</code></pre>
 
-### fast-key Property
+### `fast-scroll-key` Property
 
-fast-key 프로퍼티는 스크롤 될 엘리먼트 각각에 선언되어야 하는 프로퍼티입니다. fast-key에 정의 된 값과 key-list 프로퍼티 객체 요소의 key와 매칭 된 위치로 스크롤 됩니다.
+`fast-scroll-key` 프로퍼티는 `스크롤 리스트` 각각의 아이템에 선언되어야 하는 프로퍼티입니다.
+
+`fast-scroll` 컴포넌트의 `key-list` 프로퍼티에 정의 된 `key`와 `fast-scroll` 컴포넌트의 하위 컴포넌트에 정의 된 `fast-scroll-key`가 매칭 되는 엘리먼트를 찾아 스크롤 되게 됩니다.
 
 <pre><code>&lt;fast-scroll&gt;
-  &lt;ul slot="fastScrollItems"&gt;
-    &lt;li :fast-key="'ㄱ'"&gt;김치&lt;/li&gt;
+  &lt;ul slot="scrollList"&gt;
+    &lt;li :fast-scroll-key="'ㄱ'"&gt;김치&lt;/li&gt;
     ...
   &lt;/ul&gt;
 &lt;/fast-scroll&gt;</code></pre>
 
 ## Style
 
-### `.side-indexer`
+### `.scroll-list`
 
-Fast Scroll 할 key과 text로 구성된 `인덱스 리스트`의 스타일 클래스(`<div class="side-indexer"></div>`)입니다.
+Fast Scroll로 스크롤 될 `스크롤 리스트`의 스타일 클래스(`<div class="scroll-list"></div>`)입니다.
+
+### `.index-list`
+
+Fast Scroll 할 `key`과 `text`로 구성된 `인덱스 리스트`의 스타일 클래스(`<div class="index-list"><ul>...</ul></div>`)입니다.
 
 ### `.fast-scroll-toggle`
 
 어느 위치로 스크롤 되었는지 나타내는 문자열의 스타일 클래스(`<div class="fast-scroll-toggle"></div>`) 입니다.
+
+### `.fade-leave-active`, `.fade-leave-to`
+
+어느 위치로 스크롤 되었는지 나타내는 문자열의 fade Animation 스타일 클래스 입니다.
 
 ## Author
 [Hyo Bum Lee](https://beomy.tistory.com)
