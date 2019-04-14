@@ -1,182 +1,182 @@
 <html>
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" href="../dist/css/vue-fast-scoll.css" />
-    </head>
-    <body>
-        <div id="app">
-            <fast-scroll :key-list="fastScrollKeyList">
-                <ul slot="scrollList">
-                    <li :fast-scroll-key="'ㄱ'">가1</li>
-                    <li :fast-scroll-key="'ㄱ'">가2</li>
-                    <li :fast-scroll-key="'ㄱ'">가3</li>
-                    <li :fast-scroll-key="'ㄱ'">가4</li>
-                    <li :fast-scroll-key="'ㄱ'">가5</li>
-                    <li :fast-scroll-key="'ㄱ'">가6</li>
-                    <li :fast-scroll-key="'ㄱ'">가7</li>
-                    <li :fast-scroll-key="'ㄱ'">가8</li>
-                    <li :fast-scroll-key="'ㄱ'">가9</li>
-                    <li :fast-scroll-key="'ㄱ'">가10</li>
-                    <li :fast-scroll-key="'ㄴ'">나1</li>
-                    <li :fast-scroll-key="'ㄴ'">나2</li>
-                    <li :fast-scroll-key="'ㄴ'">나3</li>
-                    <li :fast-scroll-key="'ㄴ'">나4</li>
-                    <li :fast-scroll-key="'ㄴ'">나5</li>
-                    <li :fast-scroll-key="'ㄴ'">나6</li>
-                    <li :fast-scroll-key="'ㄴ'">나7</li>
-                    <li :fast-scroll-key="'ㄴ'">나8</li>
-                    <li :fast-scroll-key="'ㄴ'">나9</li>
-                    <li :fast-scroll-key="'ㄴ'">나10</li>
-                    <li :fast-scroll-key="'ㄷ'">다1</li>
-                    <li :fast-scroll-key="'ㄷ'">다2</li>
-                    <li :fast-scroll-key="'ㄷ'">다3</li>
-                    <li :fast-scroll-key="'ㄷ'">다4</li>
-                    <li :fast-scroll-key="'ㄷ'">다5</li>
-                    <li :fast-scroll-key="'ㄷ'">다6</li>
-                    <li :fast-scroll-key="'ㄷ'">다7</li>
-                    <li :fast-scroll-key="'ㄷ'">다8</li>
-                    <li :fast-scroll-key="'ㄷ'">다9</li>
-                    <li :fast-scroll-key="'ㄷ'">다10</li>
-                    <li :fast-scroll-key="'ㄹ'">라1</li>
-                    <li :fast-scroll-key="'ㄹ'">라2</li>
-                    <li :fast-scroll-key="'ㄹ'">라3</li>
-                    <li :fast-scroll-key="'ㄹ'">라4</li>
-                    <li :fast-scroll-key="'ㄹ'">라5</li>
-                    <li :fast-scroll-key="'ㄹ'">라6</li>
-                    <li :fast-scroll-key="'ㄹ'">라7</li>
-                    <li :fast-scroll-key="'ㄹ'">라8</li>
-                    <li :fast-scroll-key="'ㄹ'">라9</li>
-                    <li :fast-scroll-key="'ㄹ'">라10</li>
-                    <li :fast-scroll-key="'ㅁ'">마1</li>
-                    <li :fast-scroll-key="'ㅁ'">마2</li>
-                    <li :fast-scroll-key="'ㅁ'">마3</li>
-                    <li :fast-scroll-key="'ㅁ'">마4</li>
-                    <li :fast-scroll-key="'ㅁ'">마5</li>
-                    <li :fast-scroll-key="'ㅁ'">마6</li>
-                    <li :fast-scroll-key="'ㅁ'">마7</li>
-                    <li :fast-scroll-key="'ㅁ'">마8</li>
-                    <li :fast-scroll-key="'ㅁ'">마9</li>
-                    <li :fast-scroll-key="'ㅁ'">마10</li>
-                    <li :fast-scroll-key="'ㅂ'">바1</li>
-                    <li :fast-scroll-key="'ㅂ'">바2</li>
-                    <li :fast-scroll-key="'ㅂ'">바3</li>
-                    <li :fast-scroll-key="'ㅂ'">바4</li>
-                    <li :fast-scroll-key="'ㅂ'">바5</li>
-                    <li :fast-scroll-key="'ㅂ'">바6</li>
-                    <li :fast-scroll-key="'ㅂ'">바7</li>
-                    <li :fast-scroll-key="'ㅂ'">바8</li>
-                    <li :fast-scroll-key="'ㅂ'">바9</li>
-                    <li :fast-scroll-key="'ㅂ'">바10</li>
-                    <li :fast-scroll-key="'ㅅ'">사1</li>
-                    <li :fast-scroll-key="'ㅅ'">사2</li>
-                    <li :fast-scroll-key="'ㅅ'">사3</li>
-                    <li :fast-scroll-key="'ㅅ'">사4</li>
-                    <li :fast-scroll-key="'ㅅ'">사5</li>
-                    <li :fast-scroll-key="'ㅅ'">사6</li>
-                    <li :fast-scroll-key="'ㅅ'">사7</li>
-                    <li :fast-scroll-key="'ㅅ'">사8</li>
-                    <li :fast-scroll-key="'ㅅ'">사9</li>
-                    <li :fast-scroll-key="'ㅅ'">사10</li>
-                    <li :fast-scroll-key="'ㅇ'">아1</li>
-                    <li :fast-scroll-key="'ㅇ'">아2</li>
-                    <li :fast-scroll-key="'ㅇ'">아3</li>
-                    <li :fast-scroll-key="'ㅇ'">아4</li>
-                    <li :fast-scroll-key="'ㅇ'">아5</li>
-                    <li :fast-scroll-key="'ㅇ'">아6</li>
-                    <li :fast-scroll-key="'ㅇ'">아7</li>
-                    <li :fast-scroll-key="'ㅇ'">아8</li>
-                    <li :fast-scroll-key="'ㅇ'">아9</li>
-                    <li :fast-scroll-key="'ㅇ'">아10</li>
-                    <li :fast-scroll-key="'ㅈ'">자1</li>
-                    <li :fast-scroll-key="'ㅈ'">자2</li>
-                    <li :fast-scroll-key="'ㅈ'">자3</li>
-                    <li :fast-scroll-key="'ㅈ'">자4</li>
-                    <li :fast-scroll-key="'ㅈ'">자5</li>
-                    <li :fast-scroll-key="'ㅈ'">자6</li>
-                    <li :fast-scroll-key="'ㅈ'">자7</li>
-                    <li :fast-scroll-key="'ㅈ'">자8</li>
-                    <li :fast-scroll-key="'ㅈ'">자9</li>
-                    <li :fast-scroll-key="'ㅈ'">자10</li>
-                    <li :fast-scroll-key="'ㅊ'">차1</li>
-                    <li :fast-scroll-key="'ㅊ'">차2</li>
-                    <li :fast-scroll-key="'ㅊ'">차3</li>
-                    <li :fast-scroll-key="'ㅊ'">차4</li>
-                    <li :fast-scroll-key="'ㅊ'">차5</li>
-                    <li :fast-scroll-key="'ㅊ'">차6</li>
-                    <li :fast-scroll-key="'ㅊ'">차7</li>
-                    <li :fast-scroll-key="'ㅊ'">차8</li>
-                    <li :fast-scroll-key="'ㅊ'">차9</li>
-                    <li :fast-scroll-key="'ㅊ'">차10</li>
-                    <li :fast-scroll-key="'ㅋ'">카1</li>
-                    <li :fast-scroll-key="'ㅋ'">카2</li>
-                    <li :fast-scroll-key="'ㅋ'">카3</li>
-                    <li :fast-scroll-key="'ㅋ'">카4</li>
-                    <li :fast-scroll-key="'ㅋ'">카5</li>
-                    <li :fast-scroll-key="'ㅋ'">카6</li>
-                    <li :fast-scroll-key="'ㅋ'">카7</li>
-                    <li :fast-scroll-key="'ㅋ'">카8</li>
-                    <li :fast-scroll-key="'ㅋ'">카9</li>
-                    <li :fast-scroll-key="'ㅋ'">카10</li>
-                    <li :fast-scroll-key="'ㅌ'">타1</li>
-                    <li :fast-scroll-key="'ㅌ'">타2</li>
-                    <li :fast-scroll-key="'ㅌ'">타3</li>
-                    <li :fast-scroll-key="'ㅌ'">타4</li>
-                    <li :fast-scroll-key="'ㅌ'">타5</li>
-                    <li :fast-scroll-key="'ㅌ'">타6</li>
-                    <li :fast-scroll-key="'ㅌ'">타7</li>
-                    <li :fast-scroll-key="'ㅌ'">타8</li>
-                    <li :fast-scroll-key="'ㅌ'">타9</li>
-                    <li :fast-scroll-key="'ㅌ'">타10</li>
-                    <li :fast-scroll-key="'ㅍ'">파1</li>
-                    <li :fast-scroll-key="'ㅍ'">파2</li>
-                    <li :fast-scroll-key="'ㅍ'">파3</li>
-                    <li :fast-scroll-key="'ㅍ'">파4</li>
-                    <li :fast-scroll-key="'ㅍ'">파5</li>
-                    <li :fast-scroll-key="'ㅍ'">파6</li>
-                    <li :fast-scroll-key="'ㅍ'">파7</li>
-                    <li :fast-scroll-key="'ㅍ'">파8</li>
-                    <li :fast-scroll-key="'ㅍ'">파9</li>
-                    <li :fast-scroll-key="'ㅍ'">파10</li>
-                    <li :fast-scroll-key="'ㅎ'">하1</li>
-                    <li :fast-scroll-key="'ㅎ'">하2</li>
-                    <li :fast-scroll-key="'ㅎ'">하3</li>
-                    <li :fast-scroll-key="'ㅎ'">하4</li>
-                    <li :fast-scroll-key="'ㅎ'">하5</li>
-                    <li :fast-scroll-key="'ㅎ'">하6</li>
-                    <li :fast-scroll-key="'ㅎ'">하7</li>
-                    <li :fast-scroll-key="'ㅎ'">하8</li>
-                    <li :fast-scroll-key="'ㅎ'">하9</li>
-                    <li :fast-scroll-key="'ㅎ'">하10</li>
-                </ul>
-            </fast-scroll>
-        </div>
-    </body>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue"></script>
-    <script type="text/javascript" src="../dist/js/vue-fast-scroll.js"></script>
-    <script type="text/javascript">
-        Vue.use(window.VueFastScroll)
-        var app = new Vue({
-            el: '#app',
-            computed: {
-                fastScrollKeyList () {
-                    return [
-                        {key: 'ㄱ', text: 'ㄱ'},
-                        {key: 'ㄴ', text: 'ㄴ'},
-                        {key: 'ㄷ', text: 'ㄷ'},
-                        {key: 'ㄹ', text: 'ㄹ'},
-                        {key: 'ㅁ', text: 'ㅁ'},
-                        {key: 'ㅂ', text: 'ㅂ'},
-                        {key: 'ㅅ', text: 'ㅅ'},
-                        {key: 'ㅇ', text: 'ㅇ'},
-                        {key: 'ㅈ', text: 'ㅈ'},
-                        {key: 'ㅊ', text: 'ㅊ'},
-                        {key: 'ㅋ', text: 'ㅋ'},
-                        {key: 'ㅌ', text: 'ㅌ'},
-                        {key: 'ㅍ', text: 'ㅍ'},
-                        {key: 'ㅎ', text: 'ㅎ'}
-                    ]
-                }
-            }
-        })
-    </script>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="../dist/css/vue-fast-scoll.css" />
+  </head>
+  <body>
+    <div id="app">
+      <fast-scroll :key-list="fastScrollKeyList">
+        <ul slot="scrollList">
+          <li :fast-scroll-key="'ㄱ'">가1</li>
+          <li :fast-scroll-key="'ㄱ'">가2</li>
+          <li :fast-scroll-key="'ㄱ'">가3</li>
+          <li :fast-scroll-key="'ㄱ'">가4</li>
+          <li :fast-scroll-key="'ㄱ'">가5</li>
+          <li :fast-scroll-key="'ㄱ'">가6</li>
+          <li :fast-scroll-key="'ㄱ'">가7</li>
+          <li :fast-scroll-key="'ㄱ'">가8</li>
+          <li :fast-scroll-key="'ㄱ'">가9</li>
+          <li :fast-scroll-key="'ㄱ'">가10</li>
+          <li :fast-scroll-key="'ㄴ'">나1</li>
+          <li :fast-scroll-key="'ㄴ'">나2</li>
+          <li :fast-scroll-key="'ㄴ'">나3</li>
+          <li :fast-scroll-key="'ㄴ'">나4</li>
+          <li :fast-scroll-key="'ㄴ'">나5</li>
+          <li :fast-scroll-key="'ㄴ'">나6</li>
+          <li :fast-scroll-key="'ㄴ'">나7</li>
+          <li :fast-scroll-key="'ㄴ'">나8</li>
+          <li :fast-scroll-key="'ㄴ'">나9</li>
+          <li :fast-scroll-key="'ㄴ'">나10</li>
+          <li :fast-scroll-key="'ㄷ'">다1</li>
+          <li :fast-scroll-key="'ㄷ'">다2</li>
+          <li :fast-scroll-key="'ㄷ'">다3</li>
+          <li :fast-scroll-key="'ㄷ'">다4</li>
+          <li :fast-scroll-key="'ㄷ'">다5</li>
+          <li :fast-scroll-key="'ㄷ'">다6</li>
+          <li :fast-scroll-key="'ㄷ'">다7</li>
+          <li :fast-scroll-key="'ㄷ'">다8</li>
+          <li :fast-scroll-key="'ㄷ'">다9</li>
+          <li :fast-scroll-key="'ㄷ'">다10</li>
+          <li :fast-scroll-key="'ㄹ'">라1</li>
+          <li :fast-scroll-key="'ㄹ'">라2</li>
+          <li :fast-scroll-key="'ㄹ'">라3</li>
+          <li :fast-scroll-key="'ㄹ'">라4</li>
+          <li :fast-scroll-key="'ㄹ'">라5</li>
+          <li :fast-scroll-key="'ㄹ'">라6</li>
+          <li :fast-scroll-key="'ㄹ'">라7</li>
+          <li :fast-scroll-key="'ㄹ'">라8</li>
+          <li :fast-scroll-key="'ㄹ'">라9</li>
+          <li :fast-scroll-key="'ㄹ'">라10</li>
+          <li :fast-scroll-key="'ㅁ'">마1</li>
+          <li :fast-scroll-key="'ㅁ'">마2</li>
+          <li :fast-scroll-key="'ㅁ'">마3</li>
+          <li :fast-scroll-key="'ㅁ'">마4</li>
+          <li :fast-scroll-key="'ㅁ'">마5</li>
+          <li :fast-scroll-key="'ㅁ'">마6</li>
+          <li :fast-scroll-key="'ㅁ'">마7</li>
+          <li :fast-scroll-key="'ㅁ'">마8</li>
+          <li :fast-scroll-key="'ㅁ'">마9</li>
+          <li :fast-scroll-key="'ㅁ'">마10</li>
+          <li :fast-scroll-key="'ㅂ'">바1</li>
+          <li :fast-scroll-key="'ㅂ'">바2</li>
+          <li :fast-scroll-key="'ㅂ'">바3</li>
+          <li :fast-scroll-key="'ㅂ'">바4</li>
+          <li :fast-scroll-key="'ㅂ'">바5</li>
+          <li :fast-scroll-key="'ㅂ'">바6</li>
+          <li :fast-scroll-key="'ㅂ'">바7</li>
+          <li :fast-scroll-key="'ㅂ'">바8</li>
+          <li :fast-scroll-key="'ㅂ'">바9</li>
+          <li :fast-scroll-key="'ㅂ'">바10</li>
+          <li :fast-scroll-key="'ㅅ'">사1</li>
+          <li :fast-scroll-key="'ㅅ'">사2</li>
+          <li :fast-scroll-key="'ㅅ'">사3</li>
+          <li :fast-scroll-key="'ㅅ'">사4</li>
+          <li :fast-scroll-key="'ㅅ'">사5</li>
+          <li :fast-scroll-key="'ㅅ'">사6</li>
+          <li :fast-scroll-key="'ㅅ'">사7</li>
+          <li :fast-scroll-key="'ㅅ'">사8</li>
+          <li :fast-scroll-key="'ㅅ'">사9</li>
+          <li :fast-scroll-key="'ㅅ'">사10</li>
+          <li :fast-scroll-key="'ㅇ'">아1</li>
+          <li :fast-scroll-key="'ㅇ'">아2</li>
+          <li :fast-scroll-key="'ㅇ'">아3</li>
+          <li :fast-scroll-key="'ㅇ'">아4</li>
+          <li :fast-scroll-key="'ㅇ'">아5</li>
+          <li :fast-scroll-key="'ㅇ'">아6</li>
+          <li :fast-scroll-key="'ㅇ'">아7</li>
+          <li :fast-scroll-key="'ㅇ'">아8</li>
+          <li :fast-scroll-key="'ㅇ'">아9</li>
+          <li :fast-scroll-key="'ㅇ'">아10</li>
+          <li :fast-scroll-key="'ㅈ'">자1</li>
+          <li :fast-scroll-key="'ㅈ'">자2</li>
+          <li :fast-scroll-key="'ㅈ'">자3</li>
+          <li :fast-scroll-key="'ㅈ'">자4</li>
+          <li :fast-scroll-key="'ㅈ'">자5</li>
+          <li :fast-scroll-key="'ㅈ'">자6</li>
+          <li :fast-scroll-key="'ㅈ'">자7</li>
+          <li :fast-scroll-key="'ㅈ'">자8</li>
+          <li :fast-scroll-key="'ㅈ'">자9</li>
+          <li :fast-scroll-key="'ㅈ'">자10</li>
+          <li :fast-scroll-key="'ㅊ'">차1</li>
+          <li :fast-scroll-key="'ㅊ'">차2</li>
+          <li :fast-scroll-key="'ㅊ'">차3</li>
+          <li :fast-scroll-key="'ㅊ'">차4</li>
+          <li :fast-scroll-key="'ㅊ'">차5</li>
+          <li :fast-scroll-key="'ㅊ'">차6</li>
+          <li :fast-scroll-key="'ㅊ'">차7</li>
+          <li :fast-scroll-key="'ㅊ'">차8</li>
+          <li :fast-scroll-key="'ㅊ'">차9</li>
+          <li :fast-scroll-key="'ㅊ'">차10</li>
+          <li :fast-scroll-key="'ㅋ'">카1</li>
+          <li :fast-scroll-key="'ㅋ'">카2</li>
+          <li :fast-scroll-key="'ㅋ'">카3</li>
+          <li :fast-scroll-key="'ㅋ'">카4</li>
+          <li :fast-scroll-key="'ㅋ'">카5</li>
+          <li :fast-scroll-key="'ㅋ'">카6</li>
+          <li :fast-scroll-key="'ㅋ'">카7</li>
+          <li :fast-scroll-key="'ㅋ'">카8</li>
+          <li :fast-scroll-key="'ㅋ'">카9</li>
+          <li :fast-scroll-key="'ㅋ'">카10</li>
+          <li :fast-scroll-key="'ㅌ'">타1</li>
+          <li :fast-scroll-key="'ㅌ'">타2</li>
+          <li :fast-scroll-key="'ㅌ'">타3</li>
+          <li :fast-scroll-key="'ㅌ'">타4</li>
+          <li :fast-scroll-key="'ㅌ'">타5</li>
+          <li :fast-scroll-key="'ㅌ'">타6</li>
+          <li :fast-scroll-key="'ㅌ'">타7</li>
+          <li :fast-scroll-key="'ㅌ'">타8</li>
+          <li :fast-scroll-key="'ㅌ'">타9</li>
+          <li :fast-scroll-key="'ㅌ'">타10</li>
+          <li :fast-scroll-key="'ㅍ'">파1</li>
+          <li :fast-scroll-key="'ㅍ'">파2</li>
+          <li :fast-scroll-key="'ㅍ'">파3</li>
+          <li :fast-scroll-key="'ㅍ'">파4</li>
+          <li :fast-scroll-key="'ㅍ'">파5</li>
+          <li :fast-scroll-key="'ㅍ'">파6</li>
+          <li :fast-scroll-key="'ㅍ'">파7</li>
+          <li :fast-scroll-key="'ㅍ'">파8</li>
+          <li :fast-scroll-key="'ㅍ'">파9</li>
+          <li :fast-scroll-key="'ㅍ'">파10</li>
+          <li :fast-scroll-key="'ㅎ'">하1</li>
+          <li :fast-scroll-key="'ㅎ'">하2</li>
+          <li :fast-scroll-key="'ㅎ'">하3</li>
+          <li :fast-scroll-key="'ㅎ'">하4</li>
+          <li :fast-scroll-key="'ㅎ'">하5</li>
+          <li :fast-scroll-key="'ㅎ'">하6</li>
+          <li :fast-scroll-key="'ㅎ'">하7</li>
+          <li :fast-scroll-key="'ㅎ'">하8</li>
+          <li :fast-scroll-key="'ㅎ'">하9</li>
+          <li :fast-scroll-key="'ㅎ'">하10</li>
+        </ul>
+      </fast-scroll>
+    </div>
+  </body>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue"></script>
+  <script type="text/javascript" src="../dist/js/vue-fast-scroll.js"></script>
+  <script type="text/javascript">
+    Vue.use(window.VueFastScroll)
+    var app = new Vue({
+      el: '#app',
+      computed: {
+        fastScrollKeyList () {
+          return [
+            {key: 'ㄱ', text: 'ㄱ'},
+            {key: 'ㄴ', text: 'ㄴ'},
+            {key: 'ㄷ', text: 'ㄷ'},
+            {key: 'ㄹ', text: 'ㄹ'},
+            {key: 'ㅁ', text: 'ㅁ'},
+            {key: 'ㅂ', text: 'ㅂ'},
+            {key: 'ㅅ', text: 'ㅅ'},
+            {key: 'ㅇ', text: 'ㅇ'},
+            {key: 'ㅈ', text: 'ㅈ'},
+            {key: 'ㅊ', text: 'ㅊ'},
+            {key: 'ㅋ', text: 'ㅋ'},
+            {key: 'ㅌ', text: 'ㅌ'},
+            {key: 'ㅍ', text: 'ㅍ'},
+            {key: 'ㅎ', text: 'ㅎ'}
+          ]
+        }
+      }
+    })
+  </script>
 </html>
