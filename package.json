@@ -12,9 +12,12 @@
     "url": "git+https://github.com/beomy/vue-fast-scroll.git"
   },
   "keywords": [
+    "vue",
     "vue-fast-scroll",
     "vue fast scroll",
-    "fast scroll"
+    "fast scroll",
+    "scroll",
+    "scroll list"
   ],
   "author": {
     "name": "Hyo Bum Lee",
