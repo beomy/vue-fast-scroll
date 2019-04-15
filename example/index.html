@@ -5,7 +5,7 @@
   </head>
   <body>
     <div id="app">
-      <fast-scroll :key-list="fastScrollKeyList">
+      <fast-scroll :key-list="fastScrollKeyList" :options="options">
         <ul slot="scrollList">
           <li :fast-scroll-key="'ㄱ'">가1</li>
           <li :fast-scroll-key="'ㄱ'">가2</li>
@@ -157,9 +157,13 @@
     Vue.use(window.VueFastScroll)
     var app = new Vue({
       el: '#app',
-      computed: {
-        fastScrollKeyList () {
-          return [
+      data () {
+        return {
+          options: {
+            toggleDurationTime: 500,
+            paddingScroll: 0
+          },
+          fastScrollKeyList: [
             {key: 'ㄱ', text: 'ㄱ'},
             {key: 'ㄴ', text: 'ㄴ'},
             {key: 'ㄷ', text: 'ㄷ'},

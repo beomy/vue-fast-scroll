@@ -18,9 +18,20 @@
 </template>
 
 <script>
+const OPTIONS = {
+  toggleDurationTime: 500,
+  paddingScroll: 0
+}
+
 export default {
   name: 'fastScroll',
   props: {
+    options: {
+      type: Object,
+      default () {
+        return OPTIONS
+      }
+    },
     keyList: {
       type: Array,
       default () {
@@ -53,13 +64,19 @@ export default {
     }
   },
 
+  computed: {
+    mergedOptions () {
+      return Object.assign({}, OPTIONS, this.options)
+    }
+  },
+
   watch: {
     findKey () {
       clearTimeout(this.fastScrollToggleId)
       this.fastScrollToggle = true
       this.fastScrollToggleId = setTimeout((x) => {
         this.fastScrollToggle = false
-      }, 500)
+      }, this.mergedOptions.toggleDurationTime)
     }
   },
 
@@ -71,10 +88,6 @@ export default {
 
   methods: {
     scrollToSearch (e) {
-      if (this.fastScrollIndex[this.keyList[this.keyList.length - 1].key] === 0) {
-        this.setFastScrollIndex()
-      }
-
       const clientY = e instanceof MouseEvent ? e.clientY : e.touches[0].clientY
       for (const key in this.fastScrollIndex) {
         const value = this.fastScrollIndex[key]
@@ -89,6 +102,7 @@ export default {
           const dom = this.$refs.scrollList.querySelector(`[fast-scroll-key=${this.findKey}]`)
           if (dom) {
             dom.scrollIntoView()
+            window.scrollTo(0, window.scrollY - this.mergedOptions.paddingScroll)
           }
         } catch (e) {
           console.error(e)

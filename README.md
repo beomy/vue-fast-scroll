@@ -49,9 +49,9 @@ export default {
 
 ### `fast-scroll` Component
 
-`fast-scroll` 컴포넌트를 사용하여 그 안에 fast scroll을 지원해야 될 엘리먼트를 선언합니다. `fast-scroll` 컴포넌트는 `key-list` 프로퍼티를 가집니다.
+`fast-scroll` 컴포넌트를 사용하여 그 안에 fast scroll을 지원해야 될 엘리먼트를 선언합니다. `fast-scroll` 컴포넌트는 `key-list` 프로퍼티와 `options` 프로퍼티를 가집니다.
 
-<pre><code>&lt;fast-scroll :key-list="fastScrollKeyList"&gt;
+<pre><code>&lt;fast-scroll :key-list="fastScrollKeyList" :options="options"&gt;
   ...
 &lt;/fast-scroll&gt;</code></pre>
 
@@ -100,6 +100,23 @@ export default {
 위의 HTML이 랜더링 됩니다. 이 엘리먼트를 `인덱스 리스트`라고 하도록 하겠습니다. `인덱스 리스트`는 fast scroll key 목록을 리스트로 나타내는 엘리먼트 입니다.
 
 `fast-scroll-key`에는 `key-list` 프로퍼티 리스트 아이템의 `key` 값이 되고, `li` 태그의 문자열은 `key-list` 프로터티 리스트 아이템의 `text`가 됩니다.
+
+### `options` 프로퍼티
+
+Fast Scroll의 옵션 설정 프로퍼티입니다.
+
+<pre><code>const options = {
+  toggleDurationTime: 500,
+  paddingScroll: 0
+}</code></pre>
+
+#### `toggleDurationTime` (default: 500)
+
+Fast Scroll 시 어느 위치로 이동했는지 나타내는 토글 텍스트의 유지시간을 설정 합니다. 단위는 ms입니다.
+
+#### `paddingScroll` (default: 0)
+
+Fast Scroll 시 타겟 위치보다 얼마나 더 스크롤 할 것인지 설정 합니다.
 
 ### `fast-scroll` Component의 Slot
 
