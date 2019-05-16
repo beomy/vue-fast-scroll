@@ -36,20 +36,20 @@ export default {
       type: Array,
       default () {
         return [
-          {key: 'ㄱ', text: 'ㄱ'},
-          {key: 'ㄴ', text: 'ㄴ'},
-          {key: 'ㄷ', text: 'ㄷ'},
-          {key: 'ㄹ', text: 'ㄹ'},
-          {key: 'ㅁ', text: 'ㅁ'},
-          {key: 'ㅂ', text: 'ㅂ'},
-          {key: 'ㅅ', text: 'ㅅ'},
-          {key: 'ㅇ', text: 'ㅇ'},
-          {key: 'ㅈ', text: 'ㅈ'},
-          {key: 'ㅊ', text: 'ㅊ'},
-          {key: 'ㅋ', text: 'ㅋ'},
-          {key: 'ㅌ', text: 'ㅌ'},
-          {key: 'ㅍ', text: 'ㅍ'},
-          {key: 'ㅎ', text: 'ㅎ'}
+          { key: 'ㄱ', text: 'ㄱ' },
+          { key: 'ㄴ', text: 'ㄴ' },
+          { key: 'ㄷ', text: 'ㄷ' },
+          { key: 'ㄹ', text: 'ㄹ' },
+          { key: 'ㅁ', text: 'ㅁ' },
+          { key: 'ㅂ', text: 'ㅂ' },
+          { key: 'ㅅ', text: 'ㅅ' },
+          { key: 'ㅇ', text: 'ㅇ' },
+          { key: 'ㅈ', text: 'ㅈ' },
+          { key: 'ㅊ', text: 'ㅊ' },
+          { key: 'ㅋ', text: 'ㅋ' },
+          { key: 'ㅌ', text: 'ㅌ' },
+          { key: 'ㅍ', text: 'ㅍ' },
+          { key: 'ㅎ', text: 'ㅎ' }
         ]
       }
     }

@@ -12,9 +12,9 @@ example 디렉토리 밑에 예제 파일로도 확인 할 수 있습니다.
 
 ### CDN
 
-<pre><code>&lt;link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/vue-fast-scroll@0.0.1/dist/css/vue-fast-scoll.css" /&gt;
+<pre><code>&lt;link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/vue-fast-scroll@0.0.5/dist/css/vue-fast-scoll.css" /&gt;
 &lt;script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue"&gt;&lt;/script&gt;
-&lt;script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue-fast-scroll@0.0.1/dist/js/vue-fast-scroll.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue-fast-scroll@0.0.5/dist/js/vue-fast-scroll.js"&gt;&lt;/script&gt;
 &lt;script type="text/javascript"&gt;
     Vue.use(window.VueFastScroll)
 &lt;/script&gt;</code></pre>
