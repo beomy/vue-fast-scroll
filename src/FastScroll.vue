@@ -77,6 +77,12 @@ export default {
       this.fastScrollToggleId = setTimeout((x) => {
         this.fastScrollToggle = false
       }, this.mergedOptions.toggleDurationTime)
+    },
+
+    keyList () {
+      this.$nextTick(() => {
+        this.setFastScrollIndex()
+      })
     }
   },
 
@@ -112,8 +118,8 @@ export default {
 
     setFastScrollIndex () {
       for (const item of this.keyList) {
-        const clientReact = this.$refs.indexList.querySelector(`[fast-scroll-key="${item.key}"]`).getBoundingClientRect()
-        this.fastScrollIndex[item.key] = clientReact.y + clientReact.height
+        const clientRect = this.$refs.indexList.querySelector(`[fast-scroll-key="${item.key}"]`).getBoundingClientRect()
+        this.fastScrollIndex[item.key] = clientRect.y + clientRect.height
       }
     }
   }
